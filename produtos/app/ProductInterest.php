@@ -1,0 +1,23 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class ProductInterest extends Model 
+{
+    protected $hidden = [
+        'created_at',
+        'updated_at',
+    ];
+
+    protected $appends = ['product_name'];
+
+    public function getProductNameAttribute() {
+        return $this->product->name;
+    }
+
+    public function product() {
+        return $this->belongsTo('App\Product');
+    }
+}

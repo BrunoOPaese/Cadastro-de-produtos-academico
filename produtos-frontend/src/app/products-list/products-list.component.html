@@ -1,0 +1,18 @@
+<a routerLink="/produtos/novo">Inserir Novo</a>
+
+<table>
+    <tr>
+        <th>id</th>
+        <th>nome</th>
+        <th>preço</th>
+        <th>ações</th>
+    </tr>
+    <tr *ngFor="let item of items">
+        <td>{{ item.id }}</td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.price }}</td>
+        <td><a routerLink="/produtos/{{ item.id }}">alterar</a>
+            <button type="button" (click)="delete(item.id)">Excluir</button>
+        </td>
+    </tr>
+</table>

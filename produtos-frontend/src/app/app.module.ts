@@ -10,6 +10,11 @@ import { ProductsFormComponent } from './products-form/products-form.component';
 import { ProductInterestsListComponent } from './product-interests-list/product-interests-list.component';
 import { ProductInterestsFormComponent } from './product-interests-form/product-interests-form.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MenuComponent } from './menu/menu.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AlertComponent } from './alert/alert.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +22,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ProductsListComponent,
     ProductsFormComponent,
     ProductInterestsListComponent,
-    ProductInterestsFormComponent
+    ProductInterestsFormComponent,
+    MenuComponent,
+    NotFoundComponent,
+    AlertComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

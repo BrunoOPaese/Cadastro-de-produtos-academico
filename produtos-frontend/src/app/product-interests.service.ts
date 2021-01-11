@@ -11,7 +11,7 @@ export class ProductInterestsService {
   headers: HttpHeaders;
 
   constructor(private http: HttpClient) {
-      this.baseUrl = "http://localhost:4200/api/produtos";
+      this.baseUrl = "http://localhost/produtos/public/produtos";
       this.headers = new HttpHeaders().set('Content-Type', 'application/json')
                                       .set('Accept', 'application.json')
                                       .set('Access-Control-Allow-Origin', '*')

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductInterestsFormComponent } from './product-interests-form/product-interests-form.component';
 import { ProductInterestsListComponent } from './product-interests-list/product-interests-list.component';
 import { ProductsFormComponent } from './products-form/products-form.component';
@@ -34,6 +35,14 @@ const routes: Routes = [
 	{
 		path: 'produtos/:product_id/interesses/:id',
 		component: ProductInterestsFormComponent
+	},
+	{
+		path: '404',
+		component: NotFoundComponent
+	},
+	{
+		path: '**',
+		redirectTo: '/404'
 	}
 ];
 

@@ -20,7 +20,7 @@ class CreateProductInterestsTable extends Migration
             $table->string('email', 255);
             $table->text('message');
             $table->timestamps();
-            $table->foreign('product_id')->references('id')->on('products')->onupdate('cascade')->ondelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

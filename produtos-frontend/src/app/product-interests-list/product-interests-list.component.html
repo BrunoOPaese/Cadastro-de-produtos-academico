@@ -1,6 +1,8 @@
-<a [routerLink]="'/produtos/' + product_id + '/interesses/novo'"  class="btn btn-info">Inserir Novo</a>
+<app-header title="Interesses em Produto" [buttonLink]="'/produtos/' + product_id + '/interesses/novo'" buttonText="inserir novo"></app-header>
+
 <div class="row mt-3">
     <div class="col-12">
+        <app-alert #alert></app-alert>
         <table class="table table-light table-bordered">
             <tr>
                 <th>ID</th>

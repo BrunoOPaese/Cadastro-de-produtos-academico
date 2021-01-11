@@ -1,22 +1,24 @@
+<app-header title="Formulário de nteresses em Produto" [buttonLink]="'/produtos/' + item.product_id + '/interesses'" buttonText="voltar" [subtitle]="'Pessoa interessada: ' + item.name"></app-header>
 <div class="row mt-3">
     <div class="col-12">
+        <app-alert #alert></app-alert>
         <form action="" method="post">
             <input type="hidden" name="id" id="id" [(ngModel)]="item.id">
             <div class="form-row">
                 <div class="form-group col-6">
                     <label for="name">Nome</label>
-                    <input type="text" name="name" class="form-control" id="name" placeholder="nome" [(ngModel)]="item.name"/>
+                    <input type="text" name="name" [ngClass]="isInvalidField('name') ? 'is-invalid form-control' : 'form-control'" class="form-control" id="name" placeholder="nome" [(ngModel)]="item.name"/>
                 </div>
                 <div class="form-group col-6">
                     <label for="email">Email</label>
-                    <input type="email" name="email" step="any" id="email" class="form-control" placeholder="email" [(ngModel)]="item.email"/>
+                    <input type="email" name="email" step="any" id="email" [ngClass]="isInvalidField('email') ? 'is-invalid form-control' : 'form-control'" placeholder="email" [(ngModel)]="item.email"/>
 
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-12">
                     <label for="message">mensagem</label>
-                    <textarea name="message" id="message" class="form-control" rows="5" [(ngModel)]="item.message"></textarea>
+                    <textarea name="message" id="message" [ngClass]="isInvalidField('message') ? 'is-invalid form-control' : 'form-control'" rows="5" [(ngModel)]="item.message"></textarea>
                 </div>
             </div>
         </form>

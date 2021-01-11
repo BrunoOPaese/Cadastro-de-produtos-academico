@@ -17,8 +17,11 @@
                 </td>
                 <td>{{ item.price }}</td>
                 <td>
-                    <a routerLink="/produtos/{{ item.id }}" class="btn btn-success">alterar</a>
-                    <button type="button" class="btn btn-danger" (click)="delete(item.id)">Excluir</button>
+                    <div class="btn-group">
+                        <a [routerLink]="'/produtos/' + item.id " class="btn btn-success">alterar</a>
+                        <a [routerLink]="'/produtos/' + item.id + '/interesses'" class="btn btn-info">Ver interesses</a>
+                        <button type="button" class="btn btn-danger" (click)="delete(item.id)">Excluir</button>
+                    </div>
                 </td>
             </tr>
         </table>

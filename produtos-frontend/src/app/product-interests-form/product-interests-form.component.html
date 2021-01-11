@@ -1,1 +1,32 @@
-<p>product-interests-form works!</p>
+<div class="row mt-3">
+    <div class="col-12">
+        <form action="" method="post">
+            <input type="hidden" name="id" id="id" [(ngModel)]="item.id">
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" class="form-control" id="name" placeholder="nome" [(ngModel)]="item.name"/>
+                </div>
+                <div class="form-group col-6">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" step="any" id="email" class="form-control" placeholder="email" [(ngModel)]="item.email"/>
+
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-12">
+                    <label for="message">mensagem</label>
+                    <textarea name="message" id="message" class="form-control" rows="5" [(ngModel)]="item.message"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-12">
+        <div class="btn-group float-right">
+            <button type="button" (click)="save()" class="btn btn-success">Salvar</button>
+            <a [routerLink]="'/produtos/' + item.product_id + 'interesses'" class="btn btn-danger">Cancelar</a>
+        </div>
+    </div>
+</div>
